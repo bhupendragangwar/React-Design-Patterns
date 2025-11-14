@@ -1,8 +1,11 @@
 const express = require("express");
+const cors = require("cors")
 
 const app = express();
 
 app.use(express.json());
+// app.use(cors());
+app.use(cors({ origin: "https://super-duper-fortnight-x55w67g5xwwjf96x6-5173.app.github.dev/" }));
 
 let currentUser = {
   name: "Sarah Waters",
